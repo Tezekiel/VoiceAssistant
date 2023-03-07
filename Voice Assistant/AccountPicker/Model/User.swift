@@ -11,8 +11,7 @@ struct User: Identifiable, Codable {
         self.isActive = isActive
     }
     
-    mutating func makeActive() -> User {
+    mutating func makeActive() {
         self.isActive = true
-        return self
     }
 }

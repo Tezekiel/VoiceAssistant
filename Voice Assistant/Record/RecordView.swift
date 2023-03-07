@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct RecordView: View {
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
-        Text("Lets record")
+        Text("Lets record \(appData.account.getActive()?.name ?? "")")
     }
 }
 

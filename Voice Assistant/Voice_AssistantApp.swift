@@ -3,12 +3,14 @@ import SwiftUI
 @main
 struct Voice_AssistantApp: App {
     @StateObject private var appData = AppData()
+    @State var shown = false
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                if appData.account.showAccountPicker {
-                    AccountPickerView(users: $appData.account.users, shouldShowOnStart: $appData.account.showAccountPickerOnStart) {
+                if appData.account.showAccountPicker && !shown{
+                    AccountPickerView(account: $appData.account) {
+                        shown = true
                         Task {
                             do {
                                 try await AppData.save(account: appData.account.recalc())
@@ -26,7 +28,7 @@ struct Voice_AssistantApp: App {
                 } catch {
                     print(error)
                 }
-            }
+            }.environmentObject(appData)
         }
     }
 }

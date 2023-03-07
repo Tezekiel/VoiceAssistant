@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct AccountPickerView: View {
-    @Binding var users: [User]
-    @Binding var shouldShowOnStart: Bool
+    @Binding var account: Account
     let onUserSelected: () -> Void
     @State private var newUserName = ""
     
@@ -11,10 +10,11 @@ struct AccountPickerView: View {
             HeaderView()
             Form {
                 Section(header: Text("Pick or create user")) {
-                    ForEach(users) { user in
+                    ForEach(account.users) { user in
                         Button(action: {
-                            guard let index = users.firstIndex(where: { $0.id == user.id }) else { return }
-                            users[index] = users[index].makeActive()
+                            guard let index = account.users.firstIndex(where: { $0.id == user.id }) else { return }
+                            account.users = account.users.map({User(name: $0.name)})
+                            account.users[index].makeActive()
                             onUserSelected()
                         }){
                             Text(user.name)
@@ -25,7 +25,7 @@ struct AccountPickerView: View {
                         Button(action: {
                             withAnimation{
                                 let user = User(name: newUserName)
-                                users.append(user)
+                                account.users.append(user)
                                 newUserName = ""
                             }
                         }) {
@@ -34,8 +34,8 @@ struct AccountPickerView: View {
                         .disabled(newUserName.isEmpty)
                     }
                 }
-                Section(header: Text("Quick entry"), footer: Text("Don't worry you can always change this later on.")) {
-                    Toggle(isOn: $shouldShowOnStart) {
+                Section(header: Text("Quick entry"), footer: Text("Don't worry, you can always change this later on.")) {
+                    Toggle(isOn: $account.showAccountPickerOnStart) {
                         Text("Show this screen on app start")
                     }
                     .toggleStyle(.switch)
@@ -47,6 +47,6 @@ struct AccountPickerView: View {
 
 struct AccountPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountPickerView(users: .constant(AppData.sample), shouldShowOnStart: .constant(true), onUserSelected: {})
+        AccountPickerView(account: .constant(AppData.sample), onUserSelected: {})
     }
 }

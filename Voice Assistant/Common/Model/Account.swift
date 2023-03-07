@@ -11,6 +11,10 @@ struct Account: Codable {
     }
     
     private func shouldShow() -> Bool {
-        return showAccountPickerOnStart || (showAccountPickerOnStart && !users.contains(where: { $0.isActive }))
+        return showAccountPickerOnStart || !users.contains(where: { $0.isActive })
+    }
+    
+    func getActive() -> User? {
+        return self.users.first(where: { $0.isActive })
     }
 }
