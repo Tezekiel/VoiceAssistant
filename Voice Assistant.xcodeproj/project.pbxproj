@@ -8,18 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */; };
-		56D9449829B662A200EAF588 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449729B662A200EAF588 /* ContentView.swift */; };
+		56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449729B662A200EAF588 /* AccountPickerView.swift */; };
 		56D9449A29B662A400EAF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449929B662A400EAF588 /* Assets.xcassets */; };
 		56D9449E29B662A400EAF588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449D29B662A400EAF588 /* Preview Assets.xcassets */; };
+		56D944A629B665B200EAF588 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944A529B665B200EAF588 /* User.swift */; };
+		56D944AB29B6664A00EAF588 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AA29B6664A00EAF588 /* AppData.swift */; };
+		56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AC29B66A0400EAF588 /* HeaderView.swift */; };
+		56D944B029B7288D00EAF588 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AF29B7288D00EAF588 /* MainView.swift */; };
+		56D944B229B7480B00EAF588 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B129B7480B00EAF588 /* Account.swift */; };
+		56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B429B7ACAE00EAF588 /* SettingsView.swift */; };
+		56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B629B7ACCB00EAF588 /* RecordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56D9449229B662A200EAF588 /* Voice Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_AssistantApp.swift; sourceTree = "<group>"; };
-		56D9449729B662A200EAF588 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56D9449729B662A200EAF588 /* AccountPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPickerView.swift; sourceTree = "<group>"; };
 		56D9449929B662A400EAF588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D9449B29B662A400EAF588 /* Voice_Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Voice_Assistant.entitlements; sourceTree = "<group>"; };
 		56D9449D29B662A400EAF588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56D944A529B665B200EAF588 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		56D944AA29B6664A00EAF588 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		56D944AC29B66A0400EAF588 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		56D944AF29B7288D00EAF588 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		56D944B129B7480B00EAF588 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		56D944B429B7ACAE00EAF588 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		56D944B629B7ACCB00EAF588 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +66,12 @@
 		56D9449429B662A200EAF588 /* Voice Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				56D944B829B7ACCF00EAF588 /* Record */,
+				56D944B329B7ACA100EAF588 /* Settings */,
+				56D944AE29B7287D00EAF588 /* Main */,
+				56D944A729B6662000EAF588 /* Common */,
+				56D944A429B6645A00EAF588 /* AccountPicker */,
 				56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */,
-				56D9449729B662A200EAF588 /* ContentView.swift */,
 				56D9449929B662A400EAF588 /* Assets.xcassets */,
 				56D9449B29B662A400EAF588 /* Voice_Assistant.entitlements */,
 				56D9449C29B662A400EAF588 /* Preview Content */,
@@ -67,6 +85,65 @@
 				56D9449D29B662A400EAF588 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56D944A429B6645A00EAF588 /* AccountPicker */ = {
+			isa = PBXGroup;
+			children = (
+				56D944A929B6663200EAF588 /* Model */,
+				56D9449729B662A200EAF588 /* AccountPickerView.swift */,
+				56D944AC29B66A0400EAF588 /* HeaderView.swift */,
+			);
+			path = AccountPicker;
+			sourceTree = "<group>";
+		};
+		56D944A729B6662000EAF588 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				56D944A829B6662900EAF588 /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		56D944A829B6662900EAF588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56D944AA29B6664A00EAF588 /* AppData.swift */,
+				56D944B129B7480B00EAF588 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56D944A929B6663200EAF588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56D944A529B665B200EAF588 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56D944AE29B7287D00EAF588 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				56D944AF29B7288D00EAF588 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		56D944B329B7ACA100EAF588 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56D944B429B7ACAE00EAF588 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		56D944B829B7ACCF00EAF588 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				56D944B629B7ACCB00EAF588 /* RecordView.swift */,
+			);
+			path = Record;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D9449829B662A200EAF588 /* ContentView.swift in Sources */,
+				56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */,
+				56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */,
+				56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */,
+				56D944B029B7288D00EAF588 /* MainView.swift in Sources */,
+				56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */,
 				56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */,
+				56D944A629B665B200EAF588 /* User.swift in Sources */,
+				56D944AB29B6664A00EAF588 /* AppData.swift in Sources */,
+				56D944B229B7480B00EAF588 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +369,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.black.baron.Voice-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +407,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.black.baron.Voice-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

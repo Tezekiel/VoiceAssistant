@@ -1,17 +1,32 @@
-//
-//  Voice_AssistantApp.swift
-//  Voice Assistant
-//
-//  Created by Karlo Karagić on 06.03.2023..
-//
-
 import SwiftUI
 
 @main
 struct Voice_AssistantApp: App {
+    @StateObject private var appData = AppData()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                if appData.account.showAccountPicker {
+                    AccountPickerView(users: $appData.account.users, shouldShowOnStart: $appData.account.showAccountPickerOnStart) {
+                        Task {
+                            do {
+                                try await AppData.save(account: appData.account.recalc())
+                            } catch {
+                                print(error)
+                            }
+                        }
+                    }
+                } else {
+                    MainView()
+                }
+            }.task {
+                do {
+                    appData.account = try await AppData.load()
+                } catch {
+                    print(error)
+                }
+            }
         }
     }
 }
