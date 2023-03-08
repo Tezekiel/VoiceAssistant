@@ -11,13 +11,7 @@ struct Voice_AssistantApp: App {
                 if appData.account.showAccountPicker && !shown{
                     AccountPickerView(account: $appData.account) {
                         shown = true
-                        Task {
-                            do {
-                                try await AppData.save(account: appData.account.recalc())
-                            } catch {
-                                print(error)
-                            }
-                        }
+                        saveAccountData(account: appData.account.recalc())
                     }
                 } else {
                     MainView()
@@ -29,6 +23,17 @@ struct Voice_AssistantApp: App {
                     print(error)
                 }
             }.environmentObject(appData)
+        }
+    }
+}
+
+func saveAccountData(account: Account) {
+    Task {
+        do {
+            print(account)
+            try await AppData.save(account: account)
+        } catch {
+            print(error)
         }
     }
 }
