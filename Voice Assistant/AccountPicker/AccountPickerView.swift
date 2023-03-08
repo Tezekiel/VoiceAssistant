@@ -13,7 +13,7 @@ struct AccountPickerView: View {
                     ForEach(account.users) { user in
                         Button(action: {
                             guard let index = account.users.firstIndex(where: { $0.id == user.id }) else { return }
-                            account.users = account.users.map({User(name: $0.name)})
+                            account.makeInactive()
                             account.users[index].makeActive()
                             onUserSelected()
                         }){

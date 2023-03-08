@@ -16,7 +16,10 @@ struct SettingsView: View {
             
         }.sheet(isPresented: $showPicker) {
             AccountPickerView(account: $appData.account, onUserSelected: {
-                saveAccountData(account: appData.account.recalc())
+                print("settings")
+                print(appData.account)
+                print(appData.account.recalc())
+                saveAccountData(appData.account.recalc())
                 showPicker = false
             })
         }

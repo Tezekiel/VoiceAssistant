@@ -7,6 +7,10 @@ struct MainView: View {
                 .tabItem {
                     Label("Record", systemImage: "mic")
                 }
+            ManageRecordsView()
+                .tabItem {
+                    Label("Manage records", systemImage: "list.bullet.circle")
+                }
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")

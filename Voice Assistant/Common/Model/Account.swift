@@ -17,4 +17,21 @@ struct Account: Codable {
     func getActive() -> User? {
         return self.users.first(where: { $0.isActive })
     }
+
+    func getActiveIndex() -> Int? {
+        return self.users.firstIndex(where: { $0.isActive })
+    }
+    
+    mutating func insertRecord(_ record: Record) {
+        let userIndex = getActiveIndex() ?? 0
+        var newUser = self.users[userIndex]
+        newUser.records.insert(record, at: 0)
+        self.users[userIndex] = newUser
+    }
+    
+    mutating func makeInactive() {
+        self.users = users.map { user in
+            User(name: user.name, isActive: false, records: user.records)
+        }
+    }
 }

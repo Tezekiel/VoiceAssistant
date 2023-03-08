@@ -77,9 +77,11 @@ class AppData : ObservableObject{
 }
 
 extension AppData {
-    static let sample = Account(users: [
-        User(name: "John", isActive: false),
-        User(name: "Ringo", isActive: false),
-        User(name: "Emma", isActive: false)
-    ])
+    static let sample = Account(
+        users: [
+            User(name: "John", isActive: true, records: [Record(transcript: "This is a note from user")]),
+            User(name: "Ringo", isActive: false),
+            User(name: "Emma", isActive: false)
+        ]
+    )
 }

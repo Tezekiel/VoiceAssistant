@@ -18,6 +18,9 @@
 		56D944B229B7480B00EAF588 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B129B7480B00EAF588 /* Account.swift */; };
 		56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B429B7ACAE00EAF588 /* SettingsView.swift */; };
 		56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B629B7ACCB00EAF588 /* RecordView.swift */; };
+		56D944BD29B876D400EAF588 /* ManageRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944BC29B876D400EAF588 /* ManageRecordsView.swift */; };
+		56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944BF29B877CB00EAF588 /* SpeechRecognizer.swift */; };
+		56D944C229B88D8200EAF588 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944C129B88D8200EAF588 /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		56D944B129B7480B00EAF588 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		56D944B429B7ACAE00EAF588 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		56D944B629B7ACCB00EAF588 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		56D944BC29B876D400EAF588 /* ManageRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRecordsView.swift; sourceTree = "<group>"; };
+		56D944BF29B877CB00EAF588 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		56D944C129B88D8200EAF588 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		56D9449429B662A200EAF588 /* Voice Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				56D944BB29B8769B00EAF588 /* ManageRecords */,
 				56D944B829B7ACCF00EAF588 /* Record */,
 				56D944B329B7ACA100EAF588 /* Settings */,
 				56D944AE29B7287D00EAF588 /* Main */,
@@ -90,7 +97,6 @@
 		56D944A429B6645A00EAF588 /* AccountPicker */ = {
 			isa = PBXGroup;
 			children = (
-				56D944A929B6663200EAF588 /* Model */,
 				56D9449729B662A200EAF588 /* AccountPickerView.swift */,
 				56D944AC29B66A0400EAF588 /* HeaderView.swift */,
 			);
@@ -110,14 +116,8 @@
 			children = (
 				56D944AA29B6664A00EAF588 /* AppData.swift */,
 				56D944B129B7480B00EAF588 /* Account.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		56D944A929B6663200EAF588 /* Model */ = {
-			isa = PBXGroup;
-			children = (
 				56D944A529B665B200EAF588 /* User.swift */,
+				56D944C129B88D8200EAF588 /* Record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,9 +141,26 @@
 		56D944B829B7ACCF00EAF588 /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				56D944BE29B877B200EAF588 /* Model */,
 				56D944B629B7ACCB00EAF588 /* RecordView.swift */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		56D944BB29B8769B00EAF588 /* ManageRecords */ = {
+			isa = PBXGroup;
+			children = (
+				56D944BC29B876D400EAF588 /* ManageRecordsView.swift */,
+			);
+			path = ManageRecords;
+			sourceTree = "<group>";
+		};
+		56D944BE29B877B200EAF588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56D944BF29B877CB00EAF588 /* SpeechRecognizer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +235,13 @@
 			files = (
 				56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */,
 				56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */,
+				56D944C229B88D8200EAF588 /* Record.swift in Sources */,
+				56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */,
 				56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */,
 				56D944B029B7288D00EAF588 /* MainView.swift in Sources */,
 				56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */,
 				56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */,
+				56D944BD29B876D400EAF588 /* ManageRecordsView.swift in Sources */,
 				56D944A629B665B200EAF588 /* User.swift in Sources */,
 				56D944AB29B6664A00EAF588 /* AppData.swift in Sources */,
 				56D944B229B7480B00EAF588 /* Account.swift in Sources */,
@@ -351,6 +371,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Voice Assistant/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -389,6 +411,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Voice Assistant/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
