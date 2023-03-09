@@ -29,7 +29,7 @@ struct RecordView: View {
                         speechRecognizer.stopTranscribing()
                         isRecording = false
                         withAnimation{
-                            record = Record(transcript: speechRecognizer.transcript)
+                            record = Record(transcript: speechRecognizer.transcript, alarmAt: getDateFrom(text: speechRecognizer.transcript))
                         }
                     }) {
                         Image(systemName: "stop.circle")

@@ -2,26 +2,22 @@ import SwiftUI
 
 struct RecordEditView: View {
     @Binding var record: Record
-    @State private var addReminder = false
-    @State private var alarmAt = Date()
+    
     var body: some View {
-        Form{
+        Form {
             Section(header: Text("Created at")){
-                Text(record.date, style: .date)
-                Text(record.date, style: .time)
+                Text(record.date, format: Date.FormatStyle(date: .abbreviated, time: .standard))
             }
-            Section(header:Text("Options")){
-                Toggle(isOn: $addReminder) {
-                    Text("Add a reminder")
+            Section(header:Text("Reminder")){
+                Toggle(isOn: $record.alarmOn) {
+                    Text("Activate alarm")
                 }
                 .toggleStyle(.switch)
                 // todo hook this up
-                if addReminder {
-                    DatePicker("Alarm at", selection: $alarmAt)
-                }
+                DatePicker("Alarm at", selection: $record.alarmAt)
             }
             Section(header:Text("Edit text")){
-                NavigationLink(destination: TextEditor(text: $record.transcript)) {
+                NavigationLink(destination: TextEditor(text: $record.transcript).padding()) {
                     Label(record.transcript, systemImage: "square.and.pencil")
                 }
             }
