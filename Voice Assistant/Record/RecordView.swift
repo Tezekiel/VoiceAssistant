@@ -26,10 +26,10 @@ struct RecordView: View {
             ZStack {
                 if isRecording {
                     Button(action: {
+                        speechRecognizer.stopTranscribing()
+                        isRecording = false
                         withAnimation{
-                            speechRecognizer.stopTranscribing()
                             record = Record(transcript: speechRecognizer.transcript)
-                            isRecording = false
                         }
                     }) {
                         Image(systemName: "stop.circle")
@@ -52,16 +52,20 @@ struct RecordView: View {
             }
             .padding(.vertical)
             if !record.transcript.isEmpty {
-                TranscriptCardView(record: record, onSave: { saveRecord() },onEdit: { isEditing = true})
-                    .padding(.horizontal)
-                    .transition(.scale)
+                TranscriptCardView(
+                    record: record,
+                    onSave: { saveRecord() },
+                    onEdit: { isEditing = true }
+                )
+                .padding(.horizontal)
+                .transition(.scale)
             }
             Spacer()
         }
         .padding()
         .sheet(isPresented: $isEditing) {
             NavigationView {
-                Text(record.transcript)
+                RecordEditView(record: $record)
                     .navigationTitle("Save transcript")
                     .toolbar{
                         ToolbarItem(placement: .cancellationAction) {

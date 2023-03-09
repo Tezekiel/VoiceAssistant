@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5626E2DA29B9E72000181D2C /* RecordEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2D929B9E72000181D2C /* RecordEditView.swift */; };
 		56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */; };
 		56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449729B662A200EAF588 /* AccountPickerView.swift */; };
 		56D9449A29B662A400EAF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449929B662A400EAF588 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5626E2D929B9E72000181D2C /* RecordEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEditView.swift; sourceTree = "<group>"; };
 		56D9449229B662A200EAF588 /* Voice Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_AssistantApp.swift; sourceTree = "<group>"; };
 		56D9449729B662A200EAF588 /* AccountPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPickerView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				56D944BE29B877B200EAF588 /* Model */,
 				56D944B629B7ACCB00EAF588 /* RecordView.swift */,
 				56D944C329B9CABC00EAF588 /* TranscriptCardView.swift */,
+				5626E2D929B9E72000181D2C /* RecordEditView.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */,
 				56D944C229B88D8200EAF588 /* Record.swift in Sources */,
 				56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */,
+				5626E2DA29B9E72000181D2C /* RecordEditView.swift in Sources */,
 				56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */,
 				56D944B029B7288D00EAF588 /* MainView.swift in Sources */,
 				56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */,
