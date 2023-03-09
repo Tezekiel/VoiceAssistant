@@ -21,6 +21,7 @@
 		56D944BD29B876D400EAF588 /* ManageRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944BC29B876D400EAF588 /* ManageRecordsView.swift */; };
 		56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944BF29B877CB00EAF588 /* SpeechRecognizer.swift */; };
 		56D944C229B88D8200EAF588 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944C129B88D8200EAF588 /* Record.swift */; };
+		56D944C429B9CABD00EAF588 /* TranscriptCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944C329B9CABC00EAF588 /* TranscriptCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		56D944BC29B876D400EAF588 /* ManageRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRecordsView.swift; sourceTree = "<group>"; };
 		56D944BF29B877CB00EAF588 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		56D944C129B88D8200EAF588 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		56D944C329B9CABC00EAF588 /* TranscriptCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				56D944BE29B877B200EAF588 /* Model */,
 				56D944B629B7ACCB00EAF588 /* RecordView.swift */,
+				56D944C329B9CABC00EAF588 /* TranscriptCardView.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */,
+				56D944C429B9CABD00EAF588 /* TranscriptCardView.swift in Sources */,
 				56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */,
 				56D944C229B88D8200EAF588 /* Record.swift in Sources */,
 				56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */,

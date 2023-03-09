@@ -5,29 +5,42 @@ struct RecordView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var isRecording = false
     
+    @State private var isEditing = false
+    @State var record : Record = Record.empty()
+    
+    fileprivate func saveRecord() {
+        appData.account.insertRecord(record)
+        saveAccountData(appData.account)
+        isEditing = false
+        record = Record.empty()
+    }
+    
     var body: some View {
         VStack {
             Text("Lets record \(appData.account.getActive()?.name ?? "")")
                 .font(.title)
+                .padding(.vertical)
             Image(systemName: isRecording ? "mic" :  "mic.slash")
                 .font(.largeTitle)
                 .padding(.vertical)
             ZStack {
                 if isRecording {
                     Button(action: {
-                        speechRecognizer.stopTranscribing()
-                        let record = Record(transcript: speechRecognizer.transcript)
-                        appData.account.insertRecord(record)
-                        saveAccountData(appData.account)
-                        isRecording = false
+                        withAnimation{
+                            speechRecognizer.stopTranscribing()
+                            record = Record(transcript: speechRecognizer.transcript)
+                            isRecording = false
+                        }
                     }) {
                         Image(systemName: "stop.circle")
-                            .font(.title)
+                            .font(.largeTitle)
                             .foregroundColor(.mint)
                     }
                 } else {
                     Button(action: {
                         isRecording = true
+                        isEditing = false
+                        record = Record.empty()
                         speechRecognizer.reset()
                         speechRecognizer.transcribe()
                     }) {
@@ -37,7 +50,33 @@ struct RecordView: View {
                     }
                 }
             }
-
+            .padding(.vertical)
+            if !record.transcript.isEmpty {
+                TranscriptCardView(record: record, onSave: { saveRecord() },onEdit: { isEditing = true})
+                    .padding(.horizontal)
+                    .transition(.scale)
+            }
+            Spacer()
+        }
+        .padding()
+        .sheet(isPresented: $isEditing) {
+            NavigationView {
+                Text(record.transcript)
+                    .navigationTitle("Save transcript")
+                    .toolbar{
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Discard") {
+                                record = Record.empty()
+                                isEditing = false
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Save"){
+                                saveRecord()
+                            }
+                        }
+                    }
+            }
         }
     }
 }
