@@ -5,8 +5,6 @@ struct Voice_AssistantApp: App {
     @StateObject private var appData = AppData()
     @State var isLoading = true
     
-    //todo add splash screen while it loads
-    
     var body: some Scene {
         WindowGroup {
             ZStack {
