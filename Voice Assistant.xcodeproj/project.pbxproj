@@ -28,6 +28,7 @@
 		5626E2D929B9E72000181D2C /* RecordEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEditView.swift; sourceTree = "<group>"; };
 		5626E2DC29BA3FE800181D2C /* dateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFunctions.swift; sourceTree = "<group>"; };
 		5626E2DE29BA4CB300181D2C /* RecordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCardView.swift; sourceTree = "<group>"; };
+		5626E2E429BB86C800181D2C /* Voice-Assistant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Voice-Assistant-Info.plist"; sourceTree = SOURCE_ROOT; };
 		56D9449229B662A200EAF588 /* Voice Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_AssistantApp.swift; sourceTree = "<group>"; };
 		56D9449929B662A400EAF588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		56D9449429B662A200EAF588 /* Voice Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				5626E2E429BB86C800181D2C /* Voice-Assistant-Info.plist */,
 				56D944BB29B8769B00EAF588 /* ManageRecords */,
 				56D944B829B7ACCF00EAF588 /* Record */,
 				56D944B329B7ACA100EAF588 /* Settings */,
@@ -375,6 +377,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Voice Assistant/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Voice-Assistant-Info.plist";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -415,6 +418,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Voice Assistant/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Voice-Assistant-Info.plist";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

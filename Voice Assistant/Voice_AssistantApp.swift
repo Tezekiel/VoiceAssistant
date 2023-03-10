@@ -3,21 +3,32 @@ import SwiftUI
 @main
 struct Voice_AssistantApp: App {
     @StateObject private var appData = AppData()
-    @State var shown = false
+    @State var isLoading = true
     
     //todo add splash screen while it loads
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MainView(account: $appData.account)
+            ZStack {
+                if !isLoading {
+                    NavigationView {
+                        MainView(account: $appData.account)
+                    }
+                } else {
+                    ZStack{
+                        ProgressView().scaleEffect(x: 3, y: 3, anchor: .center)
+                    }
+                }
             }.task {
                 do {
                     appData.account = try await AppData.load()
+                    try await Task.sleep(nanoseconds: 1_000_000_000)
+                    isLoading = false
                 } catch {
+                    isLoading = false
                     print(error)
                 }
-            }.environmentObject(appData)
+            }
         }
     }
 }
