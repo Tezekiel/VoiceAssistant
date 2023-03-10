@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5626E2DA29B9E72000181D2C /* RecordEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2D929B9E72000181D2C /* RecordEditView.swift */; };
 		5626E2DD29BA3FE800181D2C /* dateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2DC29BA3FE800181D2C /* dateFunctions.swift */; };
+		5626E2DF29BA4CB300181D2C /* RecordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2DE29BA4CB300181D2C /* RecordCardView.swift */; };
 		56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */; };
 		56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449729B662A200EAF588 /* AccountPickerView.swift */; };
 		56D9449A29B662A400EAF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449929B662A400EAF588 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		5626E2D929B9E72000181D2C /* RecordEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEditView.swift; sourceTree = "<group>"; };
 		5626E2DC29BA3FE800181D2C /* dateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFunctions.swift; sourceTree = "<group>"; };
+		5626E2DE29BA4CB300181D2C /* RecordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCardView.swift; sourceTree = "<group>"; };
 		56D9449229B662A200EAF588 /* Voice Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_AssistantApp.swift; sourceTree = "<group>"; };
 		56D9449729B662A200EAF588 /* AccountPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPickerView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				56D944BC29B876D400EAF588 /* ManageRecordsView.swift */,
+				5626E2DE29BA4CB300181D2C /* RecordCardView.swift */,
 			);
 			path = ManageRecords;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */,
 				56D944C429B9CABD00EAF588 /* TranscriptCardView.swift in Sources */,
 				5626E2DD29BA3FE800181D2C /* dateFunctions.swift in Sources */,
+				5626E2DF29BA4CB300181D2C /* RecordCardView.swift in Sources */,
 				56D944B729B7ACCB00EAF588 /* RecordView.swift in Sources */,
 				56D944C229B88D8200EAF588 /* Record.swift in Sources */,
 				56D944C029B877CB00EAF588 /* SpeechRecognizer.swift in Sources */,

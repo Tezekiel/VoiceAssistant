@@ -30,10 +30,7 @@ struct Voice_AssistantApp: App {
 func saveAccountData(_ account: Account) {
     Task {
         do {
-            print(account)
             try await AppData.save(account: account)
-            print("TEST")
-            print(try await AppData.load())
         } catch {
             print(error)
         }
