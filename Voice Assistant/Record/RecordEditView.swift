@@ -13,7 +13,7 @@ struct RecordEditView: View {
                     Text("Activate alarm")
                 }
                 .toggleStyle(.switch)
-                // todo hook this up
+                // TODO hook this up
                 DatePicker("Alarm at", selection: $record.alarmAt)
             }
             Section(header:Text("Edit text")){
@@ -22,6 +22,7 @@ struct RecordEditView: View {
                 }
             }
         }
+        .navigationTitle("Manage records")
     }
 }
 

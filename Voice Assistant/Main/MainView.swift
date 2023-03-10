@@ -6,17 +6,13 @@ struct MainView: View {
     var body: some View {
         TabView{
             RecordView(account: $account)
-                .tabItem {
-                    Label("Record", systemImage: "mic")
-                }
-            ManageRecordsView(records: $account.records)
-                .tabItem {
-                    Label("Manage records", systemImage: "list.bullet.circle")
-                }
+            .tabItem { Label("Record", systemImage: "mic") }
+            ManageRecordsView(records: $account.records) {
+                saveAccountData(account)
+            }
+            .tabItem { Label("Manage records", systemImage: "list.bullet.circle") }
             SettingsView(account: $account)
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
+            .tabItem { Label("Settings", systemImage: "gearshape.fill") }
         }
     }
 }
