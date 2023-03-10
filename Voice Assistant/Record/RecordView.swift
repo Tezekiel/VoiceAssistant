@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RecordView: View {
-    @EnvironmentObject var appData: AppData
+    @Binding var account: Account
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var isRecording = false
     
@@ -9,15 +9,15 @@ struct RecordView: View {
     @State var record : Record = Record.empty()
     
     fileprivate func saveRecord() {
-        appData.account.insertRecord(record)
-        saveAccountData(appData.account)
+        account.records.insert(record, at: 0)
+        saveAccountData(account)
         isEditing = false
         record = Record.empty()
     }
     
     var body: some View {
         VStack {
-            Text("Lets record \(appData.account.getActive()?.name ?? "")")
+            Text("Let's record!")
                 .font(.title)
                 .padding(.vertical)
             Image(systemName: isRecording ? "mic" :  "mic.slash")
@@ -87,10 +87,6 @@ struct RecordView: View {
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView().environmentObject({ () -> AppData in
-            let envObj = AppData()
-            envObj.account = AppData.sample
-            return envObj
-        }())
+        RecordView(account: .constant(Account.sample))
     }
 }

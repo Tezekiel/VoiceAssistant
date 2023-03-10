@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var appData: AppData
+    @Binding var account: Account
     @State private var showPicker = false
     
     var body: some View {
@@ -15,16 +15,13 @@ struct SettingsView: View {
             }
             
         }.sheet(isPresented: $showPicker) {
-            AccountPickerView(account: $appData.account, onUserSelected: {
-                saveAccountData(appData.account.recalc())
-                showPicker = false
-            })
+            Text("gaifbsakfa")
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(account: .constant(Account.sample))
     }
 }

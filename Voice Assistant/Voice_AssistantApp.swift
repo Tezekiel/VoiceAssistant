@@ -5,17 +5,12 @@ struct Voice_AssistantApp: App {
     @StateObject private var appData = AppData()
     @State var shown = false
     
+    //todo add splash screen while it loads
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                if appData.account.showAccountPicker && !shown{
-                    AccountPickerView(account: $appData.account) {
-                        shown = true
-                        saveAccountData(appData.account.recalc())
-                    }
-                } else {
-                    MainView()
-                }
+                MainView(account: $appData.account)
             }.task {
                 do {
                     appData.account = try await AppData.load()

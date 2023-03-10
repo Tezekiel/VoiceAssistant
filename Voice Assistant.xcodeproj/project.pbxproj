@@ -11,12 +11,9 @@
 		5626E2DD29BA3FE800181D2C /* dateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2DC29BA3FE800181D2C /* dateFunctions.swift */; };
 		5626E2DF29BA4CB300181D2C /* RecordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626E2DE29BA4CB300181D2C /* RecordCardView.swift */; };
 		56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */; };
-		56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9449729B662A200EAF588 /* AccountPickerView.swift */; };
 		56D9449A29B662A400EAF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449929B662A400EAF588 /* Assets.xcassets */; };
 		56D9449E29B662A400EAF588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D9449D29B662A400EAF588 /* Preview Assets.xcassets */; };
-		56D944A629B665B200EAF588 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944A529B665B200EAF588 /* User.swift */; };
 		56D944AB29B6664A00EAF588 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AA29B6664A00EAF588 /* AppData.swift */; };
-		56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AC29B66A0400EAF588 /* HeaderView.swift */; };
 		56D944B029B7288D00EAF588 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944AF29B7288D00EAF588 /* MainView.swift */; };
 		56D944B229B7480B00EAF588 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B129B7480B00EAF588 /* Account.swift */; };
 		56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D944B429B7ACAE00EAF588 /* SettingsView.swift */; };
@@ -33,13 +30,10 @@
 		5626E2DE29BA4CB300181D2C /* RecordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCardView.swift; sourceTree = "<group>"; };
 		56D9449229B662A200EAF588 /* Voice Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_AssistantApp.swift; sourceTree = "<group>"; };
-		56D9449729B662A200EAF588 /* AccountPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPickerView.swift; sourceTree = "<group>"; };
 		56D9449929B662A400EAF588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D9449B29B662A400EAF588 /* Voice_Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Voice_Assistant.entitlements; sourceTree = "<group>"; };
 		56D9449D29B662A400EAF588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		56D944A529B665B200EAF588 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		56D944AA29B6664A00EAF588 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		56D944AC29B66A0400EAF588 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		56D944AF29B7288D00EAF588 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		56D944B129B7480B00EAF588 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		56D944B429B7ACAE00EAF588 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -93,7 +87,6 @@
 				56D944B329B7ACA100EAF588 /* Settings */,
 				56D944AE29B7287D00EAF588 /* Main */,
 				56D944A729B6662000EAF588 /* Common */,
-				56D944A429B6645A00EAF588 /* AccountPicker */,
 				56D9449529B662A200EAF588 /* Voice_AssistantApp.swift */,
 				56D9449929B662A400EAF588 /* Assets.xcassets */,
 				56D9449B29B662A400EAF588 /* Voice_Assistant.entitlements */,
@@ -110,15 +103,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		56D944A429B6645A00EAF588 /* AccountPicker */ = {
-			isa = PBXGroup;
-			children = (
-				56D9449729B662A200EAF588 /* AccountPickerView.swift */,
-				56D944AC29B66A0400EAF588 /* HeaderView.swift */,
-			);
-			path = AccountPicker;
-			sourceTree = "<group>";
-		};
 		56D944A729B6662000EAF588 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +117,6 @@
 			children = (
 				56D944AA29B6664A00EAF588 /* AppData.swift */,
 				56D944B129B7480B00EAF588 /* Account.swift */,
-				56D944A529B665B200EAF588 /* User.swift */,
 				56D944C129B88D8200EAF588 /* Record.swift */,
 			);
 			path = Model;
@@ -253,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D944AD29B66A0400EAF588 /* HeaderView.swift in Sources */,
 				56D944C429B9CABD00EAF588 /* TranscriptCardView.swift in Sources */,
 				5626E2DD29BA3FE800181D2C /* dateFunctions.swift in Sources */,
 				5626E2DF29BA4CB300181D2C /* RecordCardView.swift in Sources */,
@@ -263,10 +245,8 @@
 				5626E2DA29B9E72000181D2C /* RecordEditView.swift in Sources */,
 				56D944B529B7ACAE00EAF588 /* SettingsView.swift in Sources */,
 				56D944B029B7288D00EAF588 /* MainView.swift in Sources */,
-				56D9449829B662A200EAF588 /* AccountPickerView.swift in Sources */,
 				56D9449629B662A200EAF588 /* Voice_AssistantApp.swift in Sources */,
 				56D944BD29B876D400EAF588 /* ManageRecordsView.swift in Sources */,
-				56D944A629B665B200EAF588 /* User.swift in Sources */,
 				56D944AB29B6664A00EAF588 /* AppData.swift in Sources */,
 				56D944B229B7480B00EAF588 /* Account.swift in Sources */,
 			);
